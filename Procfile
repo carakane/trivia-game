@@ -1,2 +1,2 @@
 web: cd client && npm start
-api: bundle exec rails s -p 4000
+api: bundle exec rails s -p 3001
