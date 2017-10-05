@@ -21,7 +21,7 @@ class App extends Component {
         <Router>
           <NavBar />
         </Router>
-        <Game />
+        <ConnectedGame />
         <Footer />
       </div>
     );
