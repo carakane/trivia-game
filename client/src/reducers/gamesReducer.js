@@ -1,8 +1,11 @@
-// const initialState = {
-//   questions:[]
-// }
+const initialState = {
+  score: '',
+  clueCount: '',
+  initials: '',
+  questions: []
+}
 
-export default (state = [], action) => {
+export default (state = initialState, action) => {
     switch (action.type) {
   
       case 'START_GAME':
@@ -17,7 +20,7 @@ export default (state = [], action) => {
       // });
       // state.concat(action.payload);
       // console.log(state.concat(action.payload))
-      return state.concat(action.payload);
+      return {questions: state.concat(action.payload)};
  
       default:
         return state;

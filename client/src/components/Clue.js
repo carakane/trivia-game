@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const Clue = ({props }) => {
+const Clue = ({questions}) => {
+
   return(
     <div>
-      <div className="value"> </div>
-      <div className="category"> </div>
-      <div className="clue"> </div>
-      <div className="answer"> </div>
+      {questions.map(question =>
+      <div className="value">{question.value}
+      <div className="category">{question.category}</div>
+      <div className="clue">{question.clue}</div>
+      <div className="answer">{question.answer}</div>
+      </div>)}
+
     </div>
   )
 }

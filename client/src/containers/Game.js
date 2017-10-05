@@ -6,16 +6,19 @@ import Clue from '../components/Clue'
 
 
 class Game extends Component {
-    constructor(){
-      super()
+    constructor(props){
+      super(props)
   
       this.setState = {
-  
+        score: '',
+        clueCount: '',
+        initials: '',
+        questions: []
       }
     }
+    
 
     componentDidMount() {
-      debugger;
       this.props.fetchGame();
     }
     
@@ -23,7 +26,7 @@ class Game extends Component {
       return (
         <div className="Game">
           Let's Play Jeopardy!!!
-          <Clue props={this.props}/>
+          <Clue questions={this.props.questions}/>
         </div>
       );
     }
@@ -32,7 +35,8 @@ class Game extends Component {
   const mapStateToProps = (state) => {
     return {score: state.score,
       clueCount: state.clueCount,
-      initials: state.initials}
+      initials: state.initials,
+      questions: state.questions}
   }
 
   const mapDispatchToProps = (dispatch) => {
