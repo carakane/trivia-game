@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import fetchGame from './actions/actionCreators'
+import Clue from '../components/Clue'
 
 
 class Game extends Component {
@@ -21,6 +22,7 @@ class Game extends Component {
       return (
         <div className="Game">
           Let's Play Jeopardy!!!
+          <Clue props={this.props}/>
         </div>
       );
     }
