@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import fetchGame from './actions/actionCreators'
+import {fetchGame} from '../actions/actionCreators'
 import Clue from '../components/Clue'
 
 
@@ -15,6 +15,7 @@ class Game extends Component {
     }
 
     componentDidMount() {
+      debugger;
       this.props.fetchGame();
     }
     
