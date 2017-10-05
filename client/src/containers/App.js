@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Game from './Game'
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 
 class App extends Component {
   constructor(){
@@ -21,6 +22,7 @@ class App extends Component {
           <NavBar />
         </Router>
         <Game />
+        <Footer />
       </div>
     );
   }

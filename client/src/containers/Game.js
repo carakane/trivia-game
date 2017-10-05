@@ -14,7 +14,7 @@ class Game extends Component {
     render() {
       return (
         <div className="Game">
-          
+          Let's Play Jeopardy!!!
         </div>
       );
     }
