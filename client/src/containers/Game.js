@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import fetchGame from './actions/actionCreators'
+
 
 class Game extends Component {
     constructor(){
@@ -9,6 +11,10 @@ class Game extends Component {
       this.setState = {
   
       }
+    }
+
+    componentDidMount() {
+      this.props.fetchGame();
     }
     
     render() {
@@ -19,6 +25,18 @@ class Game extends Component {
       );
     }
   }
+
+  const mapStateToProps = (state) => {
+    return {score: state.score,
+      clueCount: state.clueCount,
+      initials: state.initials}
+  }
+
+  const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators ({
+      fetchGame: fetchGame
+    }, dispatch);
+  };
   
-  export default Game;
+  export const ConnectedGame = connect(mapStateToProps, mapDispatchToProps)(Game);
   
