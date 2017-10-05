@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/carakane/trivia-game/issues"
   },
-  "homepage": "https://github.com/carakane/trivia-game#readme"
+  "homepage": "https://github.com/carakane/trivia-game#readme",
+  "dependencies": {
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  }
 }
