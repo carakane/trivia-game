@@ -20,7 +20,7 @@ export default (state = initialState, action) => {
       // });
       // state.concat(action.payload);
       // console.log(state.concat(action.payload))
-      return {questions: state.concat(action.payload)};
+      return {...state, questions: state.concat(action.payload)};
  
       default:
         return state;
