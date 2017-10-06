@@ -7,7 +7,8 @@ class Clue extends Component {
 
     this.state = {
       question: {
-        isAnswered: false
+        isAnswered: false,
+        isCorrect: ''
       }
     }
 
@@ -20,14 +21,30 @@ class Clue extends Component {
         isAnswered: true
       }
     });
-
-    // shouldComponentUpdate(nextProps, nextState){
-    //   return true
-    // }
   }
 
-  render(){
+  onCorrect(event) {
+    this.setState({
+      question: {
+        isCorrect: true
+      }
+    });
+    debugger
+    document.getElementById(`${event}-correct`).disabled = true
+    document.getElementById(`${event}-incorrect`).disabled = true
+  }
 
+  onIncorrect(event) {
+    this.setState({
+      question: {
+        isCorrect: false
+      }
+    });
+  }
+
+
+
+  render(){
     return(
       <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
         <div className="value">${this.props.question.value || 3000}</div>
@@ -36,8 +53,8 @@ class Clue extends Component {
         <div className="answerDIV">{this.state.question.isAnswered === false ? <button onClick={() => this.onAnswer(this.props.question.id)}>Ready to Answer?</button>
           :<div> 
           <div className="answer">Answer: {titleize(this.props.question.answer)}</div>
-          <button>I was right!</button>
-          <button>I was wrong!</button>
+          <button id={this.props.question.id + '-correct'} onClick={() => this.onCorrect(this.props.question.id)}>I was right!</button>
+          <button id={this.props.question.id + '-incorrect'} onClick={() => this.onIncorrect(this.props.question.id)}>I was wrong!</button>
           </div>}
         </div>
       </div>
