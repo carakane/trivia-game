@@ -34,7 +34,11 @@ class Clue extends Component {
         <div className="category">Category: {titleize(this.props.question.category.title)}</div>
         <div className="clue">Question: {this.props.question.question}</div>
         <div className="answerDIV">{this.state.question.isAnswered === false ? <button onClick={() => this.onAnswer(this.props.question.id)}>Ready to Answer?</button>
-          : <div className="answer">Answer: {titleize(this.props.question.answer)}</div>}
+          :<div> 
+          <div className="answer">Answer: {titleize(this.props.question.answer)}</div>
+          <button>I was right!</button>
+          <button>I was wrong!</button>
+          </div>}
         </div>
       </div>
     )
