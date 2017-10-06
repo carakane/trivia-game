@@ -1,4 +1,5 @@
 const initialState = {
+  loading: '',
   score: '',
   clueCount: '',
   initials: '',
@@ -7,7 +8,8 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-  
+      case 'LOADING_GAME':
+        return Object.assign({}, state, { loading: true })
       case 'START_GAME':
       // action.payload.forEach(function(item) {
       //   const question = {
@@ -20,7 +22,8 @@ export default (state = initialState, action) => {
       // });
       // state.concat(action.payload);
       // console.log(state.concat(action.payload))
-      return {...state, questions: state.concat(action.payload)};
+        // console.log(state.questions.concat(action.payload))
+      return {...state, loading: false, questions: state.questions.concat(action.payload)};
  
       default:
         return state;

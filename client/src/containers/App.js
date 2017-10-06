@@ -7,21 +7,16 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 
 class App extends Component {
-  constructor(){
-    super()
-
-    this.setState = {
-
-    }
-  }
-  
   render() {
     return (
       <div className="App">
         <Router>
-          <NavBar />
+          <div>
+            <NavBar />
+            <Route exact path="/game" component={ConnectedGame} />
+          </div>
         </Router>
-        <ConnectedGame />
+          {/* <ConnectedGame /> */}
         <Footer />
       </div>
     );
