@@ -6,6 +6,7 @@ class Clue extends Component {
     super()
 
     this.state = {
+      score:'',
       question: {
         isAnswered: false,
         isCorrect: '',
@@ -26,17 +27,19 @@ class Clue extends Component {
 
   onCorrect(event) {
     this.setState({
-      question: {
+       question: {
         isCorrect: true,
         disabled: true
       }
     });
+    this.props.scoreHandler(this.props.question.value)
     // document.getElementById(`${event}-correct`).disabled = true
     // document.getElementById(`${event}-incorrect`).disabled = true
   }
 
   onIncorrect(event) {
     this.setState({
+      score: this.state.score - this.props.question.value,
       question: {
         isCorrect: false,
         disabled: true        

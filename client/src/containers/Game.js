@@ -7,16 +7,33 @@ import Score from './Score'
 
 
 class Game extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      score: 0
+    }
+    this.scoreHandler = this.scoreHandler.bind(this)
+
+  }
+
   componentDidMount() {
     this.props.actions.fetchGame();
+  }
+
+  scoreHandler(event){
+    debugger
+    this.setState({
+      score: this.props.score + event
+    })
   }
 
   render() {
     return (
       <div className="Game">
         <h1>Let's Play!!!</h1>
-          <Score score={this.props.score}/>
-          <ClueCards questions={this.props.questions} />
+          <Score score={this.state.score}/>
+          <ClueCards scoreHandler={this.scoreHandler} questions={this.props.questions} />
       </div>
     );
   }
@@ -25,7 +42,6 @@ const mapStateToProps = (state) => {
   return {
     loading: state.games.loading,
     score: state.games.score,
-    clueCount: state.games.clueCount,
     initials: state.games.initials,
     questions: state.games.questions
   }
