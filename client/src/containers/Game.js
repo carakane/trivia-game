@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/actionCreators'
 import ClueCards from './ClueCards'
 import Score from './Score'
+import HighScores from './HighScores'
 
 
 class Game extends Component {
@@ -11,10 +12,12 @@ class Game extends Component {
     super()
 
     this.state = {
+      visible: '',
       score: 0,
       clueCount: 0
     }
     this.scoreHandler = this.scoreHandler.bind(this)
+    this.gameOverCheck = this.gameOverCheck.bind(this)
 
   }
 
@@ -23,19 +26,30 @@ class Game extends Component {
   }
 
   scoreHandler(event){
-    debugger
     this.setState({
       score: this.state.score + event,
       clueCount: this.state.clueCount + 1
-    })
+    });
+    this.gameOverCheck()
+  }
+ 
+  gameOverCheck = () => {
+    debugger
+    if (this.state.clueCount < 9) {
+      return <ClueCards scoreHandler={this.props.scoreHandler} questions={this.props.questions} />
+    }
+    else {
+      return <HighScores />
+    }
   }
 
   render() {
     return (
       <div className="Game">
         <h1>Let's Play!!!</h1>
+        {this.state.clueCount}
           <Score score={this.state.score}/>
-          <ClueCards scoreHandler={this.scoreHandler} questions={this.props.questions} />
+          {this.gameOverCheck}
       </div>
     );
   }
