@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/actionCreators'
 import ClueCards from './ClueCards'
+import Score from './Score'
 
 
 class Game extends Component {
@@ -13,7 +14,8 @@ class Game extends Component {
   render() {
     return (
       <div className="Game">
-        Let's Play Jeopardy!!!
+        <h1>Let's Play!!!</h1>
+          <Score score={this.props.score}/>
           <ClueCards questions={this.props.questions} />
       </div>
     );
