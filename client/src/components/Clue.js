@@ -6,7 +6,6 @@ class Clue extends Component {
     super()
 
     this.state = {
-      score:'',
       question: {
         isAnswered: false,
         isCorrect: '',
@@ -45,6 +44,7 @@ class Clue extends Component {
         disabled: true        
       }
     });
+    this.props.scoreHandler(-this.props.question.value)
   }
 
 
