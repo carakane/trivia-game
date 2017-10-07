@@ -11,7 +11,8 @@ class Game extends Component {
     super()
 
     this.state = {
-      score: 0
+      score: 0,
+      clueCount: 0
     }
     this.scoreHandler = this.scoreHandler.bind(this)
 
@@ -24,7 +25,8 @@ class Game extends Component {
   scoreHandler(event){
     debugger
     this.setState({
-      score: this.state.score + event
+      score: this.state.score + event,
+      clueCount: this.state.clueCount + 1
     })
   }
 
@@ -42,6 +44,7 @@ const mapStateToProps = (state) => {
   return {
     loading: state.games.loading,
     score: state.games.score,
+    clueCount: state.games.clueCount,
     initials: state.games.initials,
     questions: state.games.questions
   }

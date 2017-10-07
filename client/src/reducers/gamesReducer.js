@@ -1,6 +1,7 @@
 const initialState = {
   loading: '',
   score: 0,
+  clueCount: 0,
   initials: '',
   questions: []
 }

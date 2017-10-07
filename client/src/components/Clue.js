@@ -32,8 +32,6 @@ class Clue extends Component {
       }
     });
     this.props.scoreHandler(this.props.question.value)
-    // document.getElementById(`${event}-correct`).disabled = true
-    // document.getElementById(`${event}-incorrect`).disabled = true
   }
 
   onIncorrect(event) {
