@@ -10,29 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171004175604) do
-
-  create_table "clues", force: :cascade do |t|
-    t.string "value"
-    t.string "category"
-    t.string "clue"
-    t.string "answer"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20171007151001) do
 
   create_table "games", force: :cascade do |t|
     t.string "intials"
-    t.integer "turn_count", default: 0
     t.integer "score"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "turns", force: :cascade do |t|
-    t.integer "value"
-    t.boolean "correct?"
-    t.integer "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
