@@ -24,7 +24,7 @@ class Game extends Component {
   scoreHandler(event){
     debugger
     this.setState({
-      score: this.props.score + event
+      score: this.state.score + event
     })
   }
 
