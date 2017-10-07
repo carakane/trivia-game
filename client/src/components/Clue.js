@@ -8,7 +8,8 @@ class Clue extends Component {
     this.state = {
       question: {
         isAnswered: false,
-        isCorrect: ''
+        isCorrect: '',
+        disabled: false
       }
     }
 
@@ -26,25 +27,28 @@ class Clue extends Component {
   onCorrect(event) {
     this.setState({
       question: {
-        isCorrect: true
+        isCorrect: true,
+        disabled: true
       }
     });
-    debugger
-    document.getElementById(`${event}-correct`).disabled = true
-    document.getElementById(`${event}-incorrect`).disabled = true
+    // document.getElementById(`${event}-correct`).disabled = true
+    // document.getElementById(`${event}-incorrect`).disabled = true
   }
 
   onIncorrect(event) {
     this.setState({
       question: {
-        isCorrect: false
+        isCorrect: false,
+        disabled: true        
       }
     });
   }
 
 
-
+  
   render(){
+    // const disabled = this.state.question.disabled ? 'disabled' : ''
+
     return(
       <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
         <div className="value">${this.props.question.value || 3000}</div>
@@ -53,8 +57,8 @@ class Clue extends Component {
         <div className="answerDIV">{this.state.question.isAnswered === false ? <button onClick={() => this.onAnswer(this.props.question.id)}>Ready to Answer?</button>
           :<div> 
           <div className="answer">Answer: {titleize(this.props.question.answer)}</div>
-          <button id={this.props.question.id + '-correct'} onClick={() => this.onCorrect(this.props.question.id)}>I was right!</button>
-          <button id={this.props.question.id + '-incorrect'} onClick={() => this.onIncorrect(this.props.question.id)}>I was wrong!</button>
+          <button disabled={this.state.question.disabled} id={this.props.question.id + '-correct'} onClick={() => this.onCorrect(this.props.question.id)}>I was right!</button>
+          <button disabled={this.state.question.disabled} id={this.props.question.id + '-incorrect'} onClick={() => this.onIncorrect(this.props.question.id)}>I was wrong!</button>
           </div>}
         </div>
       </div>
