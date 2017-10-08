@@ -17,7 +17,7 @@ class Game extends Component {
       clueCount: 0
     }
     this.scoreHandler = this.scoreHandler.bind(this)
-    this.gameOverCheck = this.gameOverCheck.bind(this)
+    // this.gameOverCheck = this.gameOverCheck.bind(this)
 
   }
 
@@ -30,18 +30,18 @@ class Game extends Component {
       score: this.state.score + event,
       clueCount: this.state.clueCount + 1
     });
-    this.gameOverCheck()
+    // this.gameOverCheck()
   }
  
-  gameOverCheck = () => {
-    debugger
-    if (this.state.clueCount < 9) {
-      return <ClueCards scoreHandler={this.props.scoreHandler} questions={this.props.questions} />
-    }
-    else {
-      return <HighScores />
-    }
-  }
+  // gameOverCheck = () => {
+  //   debugger
+  //   if (this.state.clueCount < 1) {
+  //     return true
+  //   }
+  //   else {
+  //     return false
+  //   }
+  // }
 
   render() {
     return (
@@ -49,7 +49,7 @@ class Game extends Component {
         <h1>Let's Play!!!</h1>
         {this.state.clueCount}
           <Score score={this.state.score}/>
-          {this.gameOverCheck}
+        <ClueCards scoreHandler={this.scoreHandler} questions={this.props.questions} />
       </div>
     );
   }

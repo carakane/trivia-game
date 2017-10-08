@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import {ConnectedGame} from './Game'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
+import HighScores from './HighScores'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <div>
             <NavBar />
             <Route exact path="/game" component={ConnectedGame} />
+            <Route exact path="/highscores" component={HighScores} />
           </div>
         </Router>
           {/* <ConnectedGame /> */}

@@ -12,7 +12,7 @@ const NavBar = () => {
       </NavLink>
       <NavLink 
         style={{ marginRight: '10px' }} 
-        to="/scores"
+        to="/highscores"
       >
         High Scores
       </NavLink>
