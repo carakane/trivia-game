@@ -49,7 +49,8 @@ class Game extends Component {
         },
      })
       .then((value) => {
-        console.log(`${value}`)
+        this.props.actions.gameOver(`${value}`, final)
+        // console.log(`${value}`)
       })
   }}
 
