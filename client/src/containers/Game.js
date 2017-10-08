@@ -5,6 +5,7 @@ import * as actions from '../actions/actionCreators'
 import ClueCards from './ClueCards'
 import Score from './Score'
 import HighScores from './HighScores'
+import swal from 'sweetalert'
 
 
 class Game extends Component {
@@ -17,7 +18,7 @@ class Game extends Component {
       clueCount: 0
     }
     this.scoreHandler = this.scoreHandler.bind(this)
-    // this.gameOverCheck = this.gameOverCheck.bind(this)
+    this.gameOverCheck = this.gameOverCheck.bind(this)
 
   }
 
@@ -30,25 +31,46 @@ class Game extends Component {
       score: this.state.score + event,
       clueCount: this.state.clueCount + 1
     });
-    // this.gameOverCheck()
+    this.gameOverCheck()
   }
  
-  // gameOverCheck = () => {
-  //   debugger
-  //   if (this.state.clueCount < 1) {
-  //     return true
-  //   }
-  //   else {
-  //     return false
-  //   }
-  // }
+  gameOverCheck = () => {
+    if (this.state.clueCount < 1) {
+      swal("Game Over", "Do you want to see your score?",{
+        buttons: {
+          score: "Yes!",
+          nope: "No!",
+          play: "Play Again",
+        },
+      })
+      .then((value) => {
+        switch(value) {
+          case 'score':
+            window.location = '/highscores';
+            console.log("score")
+            break;
+          case 'nope':
+            window.location = '/';
+            console.log("nope")
+            break;
+          case 'play':
+            window.location = '/game';
+            break;
+          default:
+            console.log("default")
+          
+        }
+      }
+    )
+    }
+  }
 
   render() {
     return (
       <div className="Game">
         <h1>Let's Play!!!</h1>
         {this.state.clueCount}
-          <Score score={this.state.score}/>
+        <Score score={this.state.score}/>
         <ClueCards scoreHandler={this.scoreHandler} questions={this.props.questions} />
       </div>
     );
