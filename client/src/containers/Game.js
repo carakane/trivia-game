@@ -34,20 +34,29 @@ class Game extends Component {
   }
  
   gameOverCheck = () => {
+    // let wrapper = document.createElement('div');
     const final = this.state.score
     if (this.state.clueCount > 1) {
-      swal("Game Over", `Your final score: $${final}`,{
+      swal({
+        title: "Game Over",
+        text: `Your final score is $${final}!`,
+        content: {
+          element: "input",
+          attributes: {
+            placeholder: "Enter Your Initials",
+            type: "text",
+          },
+        },
         buttons: {
-          score: "View High Scores",
+          confirm: "OK",
           nope: "Home",
           play: "Play Again",
-        },
+        }
       })
       .then((value) => {
         switch(value) {
-          case 'score':
+          case 'confirm':
             window.location = '/highscores';
-            console.log("score")
             break;
           case 'nope':
             window.location = '/';
