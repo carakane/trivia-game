@@ -65,5 +65,5 @@ class Clue extends Component {
   }  
 }
   
-export default Clue
+  export default Clue
   

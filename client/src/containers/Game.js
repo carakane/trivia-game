@@ -27,8 +27,9 @@ class Game extends Component {
   }
 
   scoreHandler(event){
+    const amount = event ? event : 3000;
     this.setState({
-      score: this.state.score + event,
+      score: this.state.score + amount,
       clueCount: this.state.clueCount + 1
     }, () => this.gameOverCheck())
   }
