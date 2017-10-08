@@ -69,7 +69,6 @@ class Game extends Component {
     return (
       <div className="Game">
         <h1>Let's Play!!!</h1>
-        {this.state.clueCount}
         <Score score={this.state.score}/>
         <ClueCards scoreHandler={this.scoreHandler} questions={this.props.questions} />
       </div>

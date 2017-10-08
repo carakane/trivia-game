@@ -48,8 +48,6 @@ class Clue extends Component {
 
   
   render(){
-    // const disabled = this.state.question.disabled ? 'disabled' : ''
-
     return(
       <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
         <div className="value">${this.props.question.value || 3000}</div>
@@ -64,10 +62,8 @@ class Clue extends Component {
         </div>
       </div>
     )
-  }
-    
-  }
+  }  
+}
   
-  
-  export default Clue
+export default Clue
   

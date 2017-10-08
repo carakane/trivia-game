@@ -6,6 +6,7 @@ import {ConnectedGame} from './Game'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import HighScores from './HighScores'
+import Instructions from '../components/Instructions'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <NavBar />
             <Route exact path="/game" component={ConnectedGame} />
             <Route exact path="/highscores" component={HighScores} />
+            <Route exact path="/Instructions" component={Instructions} />
           </div>
         </Router>
           {/* <ConnectedGame /> */}

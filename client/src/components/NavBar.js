@@ -16,6 +16,12 @@ const NavBar = () => {
       >
         High Scores
       </NavLink>
+      <NavLink
+        style={{ marginRight: '10px' }}
+        to="/instructions"
+      >
+        Instructions
+      </NavLink>
     </div>
   );
 }
