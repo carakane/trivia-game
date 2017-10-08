@@ -30,16 +30,16 @@ class Game extends Component {
     this.setState({
       score: this.state.score + event,
       clueCount: this.state.clueCount + 1
-    });
-    this.gameOverCheck()
+    }, () => this.gameOverCheck())
   }
  
   gameOverCheck = () => {
-    if (this.state.clueCount < 1) {
-      swal("Game Over", "Do you want to see your score?",{
+    const final = this.state.score
+    if (this.state.clueCount > 1) {
+      swal("Game Over", `Your final score: $${final}`,{
         buttons: {
-          score: "Yes!",
-          nope: "No!",
+          score: "View High Scores",
+          nope: "Home",
           play: "Play Again",
         },
       })
