@@ -17,8 +17,8 @@ class HighScores extends Component {
   componentDidMount() {
     this.props.actions.highScores();
   }
-  render(){
 
+  render(){
     return (
       <div>
         <h1 id="highscores">HIGH SCORES</h1>
@@ -29,12 +29,14 @@ class HighScores extends Component {
     )
   }
 }
+
 const mapStateToProps = (state) => {
   return {
     loading: state.games.loading,
     highscores: state.games.highscores
   }
 }
+
 const mapDispatchToProps = (dispatch) => {
   return { actions: bindActionCreators(actions, dispatch) }
 };

@@ -13,7 +13,6 @@ class Clue extends Component {
         disabled: false
       }
     }
-
     this.onAnswer = this.onAnswer.bind(this)
   }
   
@@ -45,9 +44,7 @@ class Clue extends Component {
     });
     this.props.scoreHandler(-this.props.question.value)
   }
-
-
-  
+ 
   render(){
     return(
       <Panel header={titleize(this.props.question.category.title) + ' ' + String.fromCharCode(0x2606) +' $' + (this.props.question.value || 3000)} bsStyle="info">
@@ -64,5 +61,5 @@ class Clue extends Component {
   }  
 }
   
-  export default Clue
+export default Clue
   

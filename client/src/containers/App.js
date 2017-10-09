@@ -23,7 +23,6 @@ class App extends Component {
             <Route exact path="/Instructions" component={Instructions} />
           </div>
         </Router>
-          {/* <ConnectedGame /> */}
         <Footer />
       </div>
     </Grid>

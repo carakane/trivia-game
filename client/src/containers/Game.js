@@ -6,7 +6,6 @@ import ClueCards from './ClueCards'
 import Score from '../components/Score'
 import swal from 'sweetalert'
 
-
 class Game extends Component {
   constructor() {
     super()
@@ -18,9 +17,7 @@ class Game extends Component {
     }
     this.scoreHandler = this.scoreHandler.bind(this)
     this.gameOverCheck = this.gameOverCheck.bind(this)
-
   }
-  
 
   componentDidMount = () => {
     this.props.actions.fetchGame();
@@ -51,10 +48,8 @@ class Game extends Component {
       .then((value) => {
         this.props.actions.gameOver(`${value}`, final)
       })
+    }
   }
-}
-
-
 
   render() {
     return (
@@ -65,6 +60,7 @@ class Game extends Component {
     );
   }
 }
+
 const mapStateToProps = (state) => {
   return {
     loading: state.games.loading,
@@ -74,6 +70,7 @@ const mapStateToProps = (state) => {
     questions: state.games.questions
   }
 }
+
 const mapDispatchToProps = (dispatch) => {
   return { actions: bindActionCreators(actions, dispatch) }
 };
