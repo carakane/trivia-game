@@ -16,9 +16,9 @@ export default (state = initialState, action) => {
        return {...state, loading: false, questions: state.questions.concat(action.payload)};
       case 'ENDING_GAME':
         return Object.assign({}, state, { ending: true })
-      case 'END_GAME':
-      console.log(action.payload)
-        // return { ...state, ending: false, questions: state.questions.concat(action.payload) };
+      // case 'END_GAME':
+      // console.log(action.payload)
+      //   // return { ...state, ending: false, questions: state.questions.concat(action.payload) };
       case 'LOADING_SCORES':
         return Object.assign({}, state, { loading: true })        
       case 'SHOW_SCORES':

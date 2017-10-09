@@ -21,6 +21,7 @@ class Game extends Component {
     this.gameOverCheck = this.gameOverCheck.bind(this)
 
   }
+  
 
   componentDidMount() {
     this.props.actions.fetchGame();
@@ -50,9 +51,11 @@ class Game extends Component {
      })
       .then((value) => {
         this.props.actions.gameOver(`${value}`, final)
-        // console.log(`${value}`)
       })
-  }}
+  }
+}
+
+
 
   render() {
     return (

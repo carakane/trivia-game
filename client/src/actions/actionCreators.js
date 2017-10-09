@@ -12,7 +12,7 @@ export function fetchGame(){
 export function gameOver(value, final) {
   const gameInfo = JSON.stringify({
     game:{
-      initials: value,
+      initials: value.toUpperCase(),
       score: final
     }
   });
@@ -21,7 +21,7 @@ export function gameOver(value, final) {
     return fetch('/api/games', {
       method: "post", body: gameInfo, headers: { "Content-Type": "application/json" }})
       .then(response => response.json())
-      .then(payload => dispatch({ type: 'END_GAME', payload }))
+      .then(window.location = '/highscores')
   }
 }
 
