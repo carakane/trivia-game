@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/actionCreators'
 import ClueCards from './ClueCards'
 import Score from './Score'
-import HighScores from './HighScores'
+import {ConnectedScores} from './HighScores'
 import swal from 'sweetalert'
 
 
