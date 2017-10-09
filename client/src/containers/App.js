@@ -1,4 +1,4 @@
-import styles from '../styles/app.css';
+import '../styles/app.css';
 import { Grid, Col } from 'react-bootstrap';
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';

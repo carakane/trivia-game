@@ -1,4 +1,4 @@
-import styles from '../styles/highscores.css';
+import '../styles/highscores.css';
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';

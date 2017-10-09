@@ -1,0 +1,14 @@
+#how {
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  font-size: 3em;
+  color: #59627f;
+  /* color: #ff6666; */
+}
+
+.col-1 {
+  margin-bottom: 18px;
+  margin-top: 18px;
+  text-align: justify;
+  
+}
