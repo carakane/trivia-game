@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+// import { Navbar } from 'react-bootstrap';
 
 const NavBar = () => {
   return (
-    <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
+    <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px', marginTop: '12px' }}>
        <NavLink 
-        style={{ marginRight: '10px' }} 
+        style={{ marginRight: '10px', marginLeft: '10px'  }} 
         to="/game"
       >
         New Game
