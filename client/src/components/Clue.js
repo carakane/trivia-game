@@ -51,8 +51,6 @@ class Clue extends Component {
   render(){
     return(
       <Panel header={'$' + this.props.question.value || 3000} bsStyle="info">
-      {/* <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}> */}
-        {/* <div className="value">${this.props.question.value || 3000}</div> */}
         <div className="category">Category: {titleize(this.props.question.category.title)}</div>
         <div className="clue">Question: {this.props.question.question}</div>
         <div className="answerDIV">{this.state.question.isAnswered === false ? <Button onClick={() => this.onAnswer(this.props.question.id)}>Ready to Answer?</Button>
@@ -61,7 +59,6 @@ class Clue extends Component {
           <Button bsStyle="info" disabled={this.state.question.disabled} id={this.props.question.id + '-correct'} onClick={() => this.onCorrect(this.props.question.id)}>I was right!</Button>
           <Button bsStyle="success" disabled={this.state.question.disabled} id={this.props.question.id + '-incorrect'} onClick={() => this.onIncorrect(this.props.question.id)}>I was wrong!</Button>
           </div>}
-        {/* </div> */}
       </div>
       </Panel>
     )

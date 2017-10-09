@@ -1,3 +1,4 @@
+import { Grid, Col } from 'react-bootstrap';
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {ConnectedGame} from './Game'
@@ -9,6 +10,8 @@ import Instructions from '../components/Instructions'
 class App extends Component {
   render() {
     return (
+      <Grid>
+      <Col xs={6} md={4} />
       <div className="App">
         <Router>
           <div>
@@ -21,6 +24,7 @@ class App extends Component {
           {/* <ConnectedGame /> */}
         <Footer />
       </div>
+    </Grid>
     );
   }
 }

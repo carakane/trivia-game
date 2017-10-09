@@ -1,8 +1,11 @@
 import React from 'react';
+import { Panel } from 'react-bootstrap';
+
 
 const Score =({score}) => {
   return(
-    <div>Your Score: {score}</div>
+    <Panel header={'$' + score} bsStyle="success">
+    </Panel>
   )
 };
 
