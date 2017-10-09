@@ -11,15 +11,15 @@ export function fetchGame(){
 
 export function gameOver(value, final) {
   const gameInfo = JSON.stringify({
-    game: {
+    game:{
       initials: value,
       score: final
     }
   });
-  console.log(gameInfo)
   return (dispatch) => {
     dispatch({ type: 'ENDING_GAME' })
-    return fetch('/api/games', {method: "post", body: gameInfo})
+    return fetch('/api/games', {
+      method: "post", body: gameInfo, headers: { "Content-Type": "application/json" }})
       .then(response => response.json())
       .then(payload => dispatch({ type: 'END_GAME', payload }))
   }

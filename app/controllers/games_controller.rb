@@ -6,12 +6,14 @@ class GamesController < ApplicationController
   end
 
   def create
-    raise game_params.inspect
+    binding.pry 
     @game = Game.new(game_params)
-    if game.save
+    if @game.save
       render json: @game, status: 201
     end
   end
+
+  
 
   private
     def game_params
