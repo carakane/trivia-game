@@ -4,7 +4,8 @@ const initialState = {
   score: 0,
   clueCount: 0,
   initials: '',
-  questions: []
+  questions: [],
+  highscores: []
 }
 
 export default (state = initialState, action) => {
@@ -21,8 +22,7 @@ export default (state = initialState, action) => {
       case 'LOADING_SCORES':
         return Object.assign({}, state, { loading: true })        
       case 'SHOW_SCORES':
-      debugger
-        console.log(action.payload)      
+        return { ...state, loading: false, highscores: state.highscores.concat(action.payload) };
       default:
         return state;
     }
