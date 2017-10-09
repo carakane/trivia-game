@@ -18,6 +18,10 @@ export default (state = initialState, action) => {
       case 'END_GAME':
       console.log(action.payload)
         // return { ...state, ending: false, questions: state.questions.concat(action.payload) };
+      case 'LOADING_SCORES':
+        return Object.assign({}, state, { loading: true })        
+      case 'SHOW_SCORES':
+        console.log(action.payload)      
       default:
         return state;
     }
