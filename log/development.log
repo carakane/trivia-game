@@ -3021,3 +3021,32 @@ Processing by GamesController#index as */*
 Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/api/games" for 127.0.0.1 at 2017-10-09 13:35:00 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.03ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/games" for 127.0.0.1 at 2017-10-09 13:35:03 -0400
+Processing by GamesController#index as */*
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.25ms)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/games" for 127.0.0.1 at 2017-10-09 13:35:04 -0400
+Processing by GamesController#index as */*
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.56ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/games" for 127.0.0.1 at 2017-10-09 13:35:05 -0400
+Processing by GamesController#index as */*
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.01ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 1.1ms)
+
+
