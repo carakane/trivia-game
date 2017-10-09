@@ -4,6 +4,14 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/actionCreators'
 
 class HighScores extends Component {
+  constructor(){
+    super()
+
+    this.state = {
+      initials: '',
+      score: ''
+    }
+  }
 
   componentDidMount() {
     this.props.actions.highScores();
@@ -11,15 +19,14 @@ class HighScores extends Component {
   render(){
 
     return (
-      <div>high scores</div>
+      <div>{this.props.highscores.map(entry => <div><h3>{entry.initials} || {entry.score}</h3></div>)}</div>
     )
   }
 }
 const mapStateToProps = (state) => {
   return {
     loading: state.games.loading,
-    score: state.games.score,
-    initials: state.games.initials,
+    highscores: state.games.highscores
   }
 }
 const mapDispatchToProps = (dispatch) => {
