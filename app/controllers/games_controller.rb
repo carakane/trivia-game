@@ -1,5 +1,10 @@
 class GamesController < ApplicationController
 
+  def index
+    @games = Game.ApplicationController
+    render json: @games
+  end
+
   def create
     raise game_params.inspect
     @game = Game.new(game_params)
