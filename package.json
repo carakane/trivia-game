@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/carakane/trivia-game#readme",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "react": "^16.0.0",
+    "react-bootstrap": "^0.31.3",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
