@@ -1,10 +1,10 @@
 import React from 'react';
+import { Panel } from 'react-bootstrap';
 
 const Footer = () => {
     return(
-        <div style={{ borderTop: '2px solid black', paddingTop: '10px', marginTop: '12px' }}>
-            All questions &copy;Jeopardy. Thanks to http://jservice.io for the API.
-        </div>
+        <Panel header={'All questions \u00a9Jeopardy.Thanks to http://jservice.io for the API.'} bsStyle="default">
+        </Panel>
     
     )
 };
