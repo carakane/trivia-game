@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Instructions = ({ }) => {
+const Instructions = () => {
   return (
     <div> 
       <h1>How to Play</h1>

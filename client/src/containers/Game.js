@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/actionCreators'
 import ClueCards from './ClueCards'
-import Score from './Score'
-import {ConnectedScores} from './HighScores'
+import Score from '../components/Score'
 import swal from 'sweetalert'
 
 
@@ -23,11 +22,11 @@ class Game extends Component {
   }
   
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.props.actions.fetchGame();
   }
 
-  scoreHandler(event){
+  scoreHandler = (event) => {
     const amount = event ? event : 3000;
     this.setState({
       score: this.state.score + amount,
