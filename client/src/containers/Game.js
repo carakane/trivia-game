@@ -36,7 +36,7 @@ class Game extends Component {
  
   gameOverCheck = () => {
     const final = this.state.score
-    if (this.state.clueCount > 1) {
+    if (this.state.clueCount > 9) {
       swal({
         title: "Game Over",
         text: `Your final score is $${final}!`,

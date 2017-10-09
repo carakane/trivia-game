@@ -50,8 +50,7 @@ class Clue extends Component {
   
   render(){
     return(
-      <Panel header={'$' + this.props.question.value || 3000} bsStyle="info">
-        <div className="category">Category: {titleize(this.props.question.category.title)}</div>
+      <Panel header={titleize(this.props.question.category.title) + ' ' + String.fromCharCode(0x2606) +' $' + (this.props.question.value || 3000)} bsStyle="info">
         <div className="clue">Question: {this.props.question.question}</div>
         <div className="answerDIV">{this.state.question.isAnswered === false ? <Button onClick={() => this.onAnswer(this.props.question.id)}>Ready to Answer?</Button>
           :<div> 

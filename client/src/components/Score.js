@@ -4,7 +4,7 @@ import { Panel } from 'react-bootstrap';
 
 const Score =({score}) => {
   return(
-    <Panel header={'$' + score} bsStyle="success">
+    <Panel header={'Current Score: $' + score} bsStyle="success">
     </Panel>
   )
 };
