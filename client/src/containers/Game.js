@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/actionCreators'
-import ClueCards from './ClueCards'
+import ClueCards from '../components/ClueCards'
 import Score from '../components/Score'
 import swal from 'sweetalert'
 
