@@ -1,0 +1,24 @@
+#highscores {
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  font-size: 3em;
+  color: #59627f;
+  /* color: #ff6666; */
+}
+
+
+.col-3 {
+  -moz-column-rule: 1px dotted #ccc;
+  -webkit-column-rule: 1px dotted #ccc;
+  column-rule: 1px dotted #ccc;
+  -moz-column-gap: 1.5em;
+  -webkit-column-gap: 1.5em;
+  column-gap: 1.5em;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  margin-bottom: 18px;
+  margin-top: 18px;
+  text-align: center
+  
+}

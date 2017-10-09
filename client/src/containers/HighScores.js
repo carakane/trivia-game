@@ -1,3 +1,4 @@
+import styles from '../styles/highscores.css';
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -20,8 +21,10 @@ class HighScores extends Component {
 
     return (
       <div>
-        <h1>HIGH SCORES</h1>
-        <div>{this.props.highscores.map(entry => <div><h3>{entry.initials} || {entry.score}</h3></div>)}</div>
+        <h1 id="highscores">HIGH SCORES</h1>
+        <div className="col-3">
+        {this.props.highscores.map(entry => <h3>{entry.initials} || {entry.score}</h3>)}
+        </div>
       </div>
     )
   }
