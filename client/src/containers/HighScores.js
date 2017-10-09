@@ -23,7 +23,7 @@ class HighScores extends Component {
       <div>
         <h1 id="highscores">HIGH SCORES</h1>
         <div className="col-3">
-        {this.props.highscores.map(entry => <h3>{entry.initials} || {entry.score}</h3>)}
+          {this.props.highscores.map(entry => <h3>{entry.initials} &#9733; {entry.score}</h3>)}
         </div>
       </div>
     )
