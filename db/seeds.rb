@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+2.times do 
+  Game.create(
+    initials: "CGK",
+    score: 1000
+  )
+end
+
+2.times do 
+  Game.create(
+    initials: "IMKR",
+    score: 1200
+  )
+end
+
+2.times do 
+  Game.create(
+    initials: "MJKR",
+    score: 1200
+  )
+end
+
+2.times do 
+  Game.create(
+    initials: "CAR",
+    score: 1000
+  )
+end

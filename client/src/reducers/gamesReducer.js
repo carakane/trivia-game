@@ -21,6 +21,7 @@ export default (state = initialState, action) => {
       case 'LOADING_SCORES':
         return Object.assign({}, state, { loading: true })        
       case 'SHOW_SCORES':
+      debugger
         console.log(action.payload)      
       default:
         return state;
