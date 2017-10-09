@@ -3282,3 +3282,78 @@ Processing by GamesController#index as */*
 Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "games"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (83.0ms)[0m  [1m[35mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "initials" varchar, "score" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (118.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (83.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171007151001)[0m
+  [1m[35m (90.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171004175056),
+(20171007150846),
+(20171004175604),
+(20171004175355),
+(20171007150838);
+
+[0m
+  [1m[35m (108.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-09 18:32:17.036538"], ["updated_at", "2017-10-09 18:32:17.036538"]]
+  [1m[35m (64.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "games"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (96.6ms)[0m  [1m[35mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "initials" varchar, "score" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (101.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (52.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171007151001)[0m
+  [1m[35m (68.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171004175056),
+(20171007150846),
+(20171004175604),
+(20171004175355),
+(20171007150838);
+
+[0m
+  [1m[35m (105.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-09 18:32:17.579669"], ["updated_at", "2017-10-09 18:32:17.579669"]]
+  [1m[35m (79.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "games" ("initials", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["initials", "CGK"], ["score", 1000], ["created_at", "2017-10-09 18:32:17.701448"], ["updated_at", "2017-10-09 18:32:17.701448"]]
+  [1m[35m (50.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "games" ("initials", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["initials", "CGK"], ["score", 1000], ["created_at", "2017-10-09 18:32:17.760188"], ["updated_at", "2017-10-09 18:32:17.760188"]]
+  [1m[35m (54.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "games" ("initials", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["initials", "IMKR"], ["score", 1200], ["created_at", "2017-10-09 18:32:17.827065"], ["updated_at", "2017-10-09 18:32:17.827065"]]
+  [1m[35m (80.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "games" ("initials", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["initials", "IMKR"], ["score", 1200], ["created_at", "2017-10-09 18:32:17.916375"], ["updated_at", "2017-10-09 18:32:17.916375"]]
+  [1m[35m (79.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "games" ("initials", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["initials", "MJKR"], ["score", 1200], ["created_at", "2017-10-09 18:32:18.004551"], ["updated_at", "2017-10-09 18:32:18.004551"]]
+  [1m[35m (60.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "games" ("initials", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["initials", "MJKR"], ["score", 1200], ["created_at", "2017-10-09 18:32:18.073899"], ["updated_at", "2017-10-09 18:32:18.073899"]]
+  [1m[35m (50.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "games" ("initials", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["initials", "CAR"], ["score", 1000], ["created_at", "2017-10-09 18:32:18.136014"], ["updated_at", "2017-10-09 18:32:18.136014"]]
+  [1m[35m (80.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "games" ("initials", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["initials", "CAR"], ["score", 1000], ["created_at", "2017-10-09 18:32:18.225936"], ["updated_at", "2017-10-09 18:32:18.225936"]]
+  [1m[35m (57.1ms)[0m  [1m[36mcommit transaction[0m
