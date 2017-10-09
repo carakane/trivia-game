@@ -1,3 +1,4 @@
+import styles from '../styles/app.css';
 import { Grid, Col } from 'react-bootstrap';
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
@@ -13,6 +14,7 @@ class App extends Component {
       <Grid>
       <Col xs={6} md={4} />
       <div className="App">
+        <h1 id="play">Let's Play!!!</h1>
         <Router>
           <div>
             <NavBar />

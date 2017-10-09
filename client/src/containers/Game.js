@@ -1,4 +1,3 @@
-import styles from '../styles/game.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -60,7 +59,6 @@ class Game extends Component {
   render() {
     return (
       <div className="Game">
-        <h1 id="play">Let's Play!!!</h1>
         <Score score={this.state.score}/>
         <ClueCards scoreHandler={this.scoreHandler} questions={this.props.questions} />
       </div>
