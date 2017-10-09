@@ -24,3 +24,12 @@ export function gameOver(value, final) {
       .then(payload => dispatch({ type: 'END_GAME', payload }))
   }
 }
+
+export function highScores() {
+  return (dispatch) => {
+    dispatch({ type: 'LOADING_SCORES' })
+    return fetch('/api/games')
+      .then(response => response.json())
+      .then(payload => dispatch({ type: 'SHOW_SCORES', payload }))
+  }
+}
