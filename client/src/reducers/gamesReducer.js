@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
        return {...state, loading: false, questions: action.payload};
       case 'ENDING_GAME':
         return Object.assign({}, state, { ending: true })
-    \ case 'LOADING_SCORES':
+      case 'LOADING_SCORES':
         return Object.assign({}, state, { loading: true })        
       case 'SHOW_SCORES':
         return { ...state, loading: false, highscores: action.payload };
