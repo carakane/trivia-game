@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
 
   def index
-    @games = Game.all
+    @games = Game.all.order(score: :desc, initials: :asc)
     render json: @games
   end
 

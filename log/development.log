@@ -2308,3 +2308,58 @@ Processing by GamesController#index as */*
 Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/api/games" for 127.0.0.1 at 2017-10-09 09:36:02 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `sort!' for #<Game::ActiveRecord_Relation:0x000000046f5bb8>
+Did you mean?  sort):
+  
+app/controllers/games_controller.rb:5:in `index'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/games" for 127.0.0.1 at 2017-10-09 09:37:18 -0400
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 16ms
+
+
+  
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `sort_by!' for #<Game::ActiveRecord_Relation:0x00000004201058>
+Did you mean?  sort_by):
+  
+app/controllers/games_controller.rb:5:in `index'
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/games" for 127.0.0.1 at 2017-10-09 09:38:28 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.61ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/games" for 127.0.0.1 at 2017-10-09 09:39:13 -0400
+  
+SyntaxError (/home/c/trivia-game/app/controllers/games_controller.rb:4: syntax error, unexpected ')', expecting =>):
+  
+app/controllers/games_controller.rb:4: syntax error, unexpected ')', expecting =>
+Started GET "/api/games" for 127.0.0.1 at 2017-10-09 09:40:40 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.94ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/games" for 127.0.0.1 at 2017-10-09 09:41:35 -0400
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.61ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.8ms)
+
+

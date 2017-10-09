@@ -19,7 +19,10 @@ class HighScores extends Component {
   render(){
 
     return (
-      <div>{this.props.highscores.map(entry => <div><h3>{entry.initials} || {entry.score}</h3></div>)}</div>
+      <div>
+        <h1>HIGH SCORES</h1>
+        <div>{this.props.highscores.map(entry => <div><h3>{entry.initials} || {entry.score}</h3></div>)}</div>
+      </div>
     )
   }
 }
