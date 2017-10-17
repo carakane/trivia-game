@@ -1,24 +1,12 @@
-# README
+# Let's Play Trivia!
+This application allows you to test your wits against Jeopardy questions fetched from the [jService API](http://www.jservice.io). Give it a try and see if you can beat your last high score!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
+After forking and cloning the repository, run `bundle install`, `npm install`, and then `rake start`.
 
-Things you may want to cover:
+## Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/carakane/trivia-game. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org)
+code of conduct.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+This application is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
