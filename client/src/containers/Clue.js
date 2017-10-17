@@ -51,7 +51,7 @@ class Clue extends Component {
         <div className="clue">Question: {this.props.question.question}</div>
         <div className="answerDIV">{this.state.question.isAnswered === false ? <Button onClick={() => this.onAnswer(this.props.question.id)}>Ready to Answer?</Button>
           :<div> 
-          <div className="answer">Answer: {titleize(this.props.question.answer)}</div>
+            <div className="answer">Answer: {titleize(this.props.question.answer.replace(/(<.>)|(<\/.>)/g, ""))}</div>
           <Button bsStyle="info" disabled={this.state.question.disabled} id={this.props.question.id + '-correct'} onClick={() => this.onCorrect(this.props.question.id)}>I was right!</Button>
           <Button bsStyle="success" disabled={this.state.question.disabled} id={this.props.question.id + '-incorrect'} onClick={() => this.onIncorrect(this.props.question.id)}>I was wrong!</Button>
           </div>}
