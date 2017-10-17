@@ -3431,3 +3431,11 @@ Processing by GamesController#index as */*
 Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/api/games" for 127.0.0.1 at 2017-10-17 14:08:02 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 1.4ms)
+
+
