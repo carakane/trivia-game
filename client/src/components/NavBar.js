@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <div style={{ 'text-align': 'center', paddingBottom: '10px', marginBottom: '12px', marginTop: '12px' }}>
+    <div style={{ 'textAlign': 'center', paddingBottom: '10px', marginBottom: '12px', marginTop: '12px' }}>
        <NavLink 
         style={{ marginRight: '10px', marginLeft: '10px'  }} 
         to="/game"
