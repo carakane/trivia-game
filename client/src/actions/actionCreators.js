@@ -39,3 +39,15 @@ export function scoreUpdate(amount) {
     dispatch({ type: 'UPDATE_SCORE', amount })
   }
 }
+
+export function likesUpdate(gameId) {
+  return (dispatch) => {
+    dispatch({ type: 'UPDATING_LIKES' })
+    return fetch(`/api/games/${gameId}`, {
+      method: "put", body: JSON.stringify({id:gameId}), headers: { "Content-Type": "application/json" }
+    })
+      .then(response => response.json())
+      .then(game => console.log(game))
+      
+  }
+}

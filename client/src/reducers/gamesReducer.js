@@ -1,6 +1,7 @@
 const initialState = {
   loading: '',
   ending: '',
+  updating: '',
   score: 0,
   clueCount: 0,
   initials: '',
@@ -22,6 +23,8 @@ export default (state = initialState, action) => {
         return { ...state, loading: false, highscores: action.payload };
       case 'UPDATE_SCORE':
         return{...state, score: state.score += action.amount, clueCount: state.clueCount += 1}
+      case 'UPDATING_LIKES':
+        return Object.assign({}, state, { updating: true })      
       default:
         return state;
     }

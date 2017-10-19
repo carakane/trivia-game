@@ -25,7 +25,7 @@ class HighScores extends Component {
       <div>
         <h1 id="highscores">HIGH SCORES</h1>
         <div className="col-3">
-          {this.props.highscores.map(entry => <ConnectedScoreCard entry={entry} />)}
+          {this.props.highscores.map(entry => <ConnectedScoreCard entry={entry} key={entry.id} />)}
           
         </div>
       </div>

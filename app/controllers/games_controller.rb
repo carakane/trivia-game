@@ -12,6 +12,13 @@ class GamesController < ApplicationController
     end
   end
 
+  def update
+    @game = Game.find(params[:id])
+    @game.likes +=1
+    @game.save
+    render json: @game
+  end
+
   
 
   private

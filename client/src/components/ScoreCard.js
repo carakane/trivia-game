@@ -4,34 +4,34 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/actionCreators'
 
 class ScoreCard extends Component {
-  constructor(){
-    super()
+  // constructor(){
+  //   super()
 
-    this.state = {
-      counter: 0,
-    }
-  }
+  //   this.state = {
+  //     counter: 0,
+  //   }
+  // }
 
-  clickHandler = (key) => {
-    this.props.actions.likesUpdate(key)
+  clickHandler = (event) => {
+    this.props.actions.likesUpdate(event)
     // this.setState({
     //   counter: this.state.counter += 1
     // })
   }
 
-  callApi = () => {
-    console.log("a")
-    fetch('/api/games')
-      .then(response => {
-        console.log("b")
-        return response.json()})
-      .then(games => console.log("c", games))
-      console.log("d")
-  }
+  // callApi = () => {
+  //   console.log("a")
+  //   fetch('/api/games')
+  //     .then(response => {
+  //       console.log("b")
+  //       return response.json()})
+  //     .then(games => console.log("c", games))
+  //     console.log("d")
+  // }
 
   render(){
     return(
-      <div key={this.props.entry.id}><h3>{this.props.entry.initials} &#9733; {this.props.entry.score}</h3><button onClick={this.clickHandler}>Likes: {this.props.entry.likes}</button><button onClick={this.callApi}>Call Api</button></div>
+      <div key={this.props.entry.id}><h3>{this.props.entry.initials} &#9733; {this.props.entry.score}</h3><button onClick={() => this.clickHandler(this.props.entry.id)}>Likes: {this.props.entry.likes}</button></div>
     )
   }
 }
