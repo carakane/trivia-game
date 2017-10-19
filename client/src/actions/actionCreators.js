@@ -33,3 +33,9 @@ export function highScores() {
       .then(payload => dispatch({ type: 'SHOW_SCORES', payload }))
   }
 }
+
+export function scoreUpdate(amount) {
+  return (dispatch) => {
+    dispatch({ type: 'UPDATE_SCORE', amount })
+  }
+}

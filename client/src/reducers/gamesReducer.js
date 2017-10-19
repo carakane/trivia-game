@@ -20,6 +20,8 @@ export default (state = initialState, action) => {
         return Object.assign({}, state, { loading: true })        
       case 'SHOW_SCORES':
         return { ...state, loading: false, highscores: action.payload };
+      case 'UPDATE_SCORE':
+        return{...state, score: state.score += action.amount, clueCount: state.clueCount += 1}
       default:
         return state;
     }
