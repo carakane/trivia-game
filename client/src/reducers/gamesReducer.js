@@ -24,7 +24,16 @@ export default (state = initialState, action) => {
       case 'UPDATE_SCORE':
         return{...state, score: state.score += action.amount, clueCount: state.clueCount += 1}
       case 'UPDATING_LIKES':
-        return Object.assign({}, state, { updating: true })      
+        return Object.assign({}, state, { updating: true })  
+      case 'SHOW_LIKES':
+        const index = state.highscores.findIndex(score => score.id === action.payload.id);
+        const score = state.highscores[index];
+
+        return {...state, updating: false, highscores:  [
+          ...state.highscores.slice(0, index),
+          Object.assign({}, score, { likes: action.payload.likes }),
+          ...state.highscores.slice(index + 1)
+        ]};
       default:
         return state;
     }

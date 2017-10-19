@@ -47,7 +47,7 @@ export function likesUpdate(gameId) {
       method: "put", body: JSON.stringify({id:gameId}), headers: { "Content-Type": "application/json" }
     })
       .then(response => response.json())
-      .then(game => console.log(game))
+      .then(payload => dispatch({ type: 'SHOW_LIKES', payload }))
       
   }
 }
