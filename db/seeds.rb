@@ -9,27 +9,31 @@
 2.times do 
   Game.create(
     initials: "CGK",
-    score: 1000
+    score: 1000,
+    likes: rand(0..5)    
   )
 end
 
 2.times do 
   Game.create(
     initials: "IMKR",
-    score: 1200
+    score: 1200,
+    likes: rand(0..5) 
   )
 end
 
 2.times do 
   Game.create(
     initials: "MJKR",
-    score: 1200
+    score: 1200,
+    likes: rand(0..5) 
   )
 end
 
 2.times do 
   Game.create(
     initials: "CAR",
-    score: 1000
+    score: 1000,
+    likes: rand(0..5) 
   )
 end

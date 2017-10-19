@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171007151001) do
+ActiveRecord::Schema.define(version: 20171019132500) do
 
   create_table "games", force: :cascade do |t|
     t.string "initials"
     t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "likes", default: 0
   end
 
 end
