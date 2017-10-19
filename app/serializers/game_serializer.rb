@@ -1,3 +1,3 @@
 class GameSerializer < ActiveModel::Serializer
-  attributes :id, :initials, :score
+  attributes :id, :initials, :score, :likes
 end
