@@ -25,16 +25,13 @@ class Game extends Component {
 
   scoreHandler = (event) => {
     const amount = event ? event : 3000;
-    this.props.actions.scoreUpdate(amount)
-    // this.setState({
-    //   score: this.state.score + amount,
-    //   clueCount: this.state.clueCount + 1
-    // }, () => this.gameOverCheck())
+    this.props.actions.scoreUpdate(amount);
+    this.gameOverCheck()
   }
  
   gameOverCheck = () => {
-    const final = this.state.score
-    if (this.state.clueCount > 9) {
+    const final = this.props.score
+    if (this.props.clueCount === 9) {
       swal({
         title: "Game Over",
         text: `Your final score is $${final}!`,
@@ -55,7 +52,7 @@ class Game extends Component {
   render() {
     return (
       <div className="Game">
-        <Score score={this.state.score}/>
+        <Score score={this.props.score}/>
         <ClueCards scoreHandler={this.scoreHandler} questions={this.props.questions} />
       </div>
     );
