@@ -1,4 +1,7 @@
 import React, {Component} from 'react'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from '../actions/actionCreators'
 
 class ScoreCard extends Component {
   constructor(){
@@ -9,10 +12,11 @@ class ScoreCard extends Component {
     }
   }
 
-  clickHandler = () => {
-    this.setState({
-      counter: this.state.counter += 1
-    })
+  clickHandler = (key) => {
+    this.props.actions.likesUpdate(key)
+    // this.setState({
+    //   counter: this.state.counter += 1
+    // })
   }
 
   callApi = () => {
@@ -27,9 +31,18 @@ class ScoreCard extends Component {
 
   render(){
     return(
-      <div><h3>{this.props.entry.initials} &#9733; {this.props.entry.score}</h3><button onClick={this.clickHandler}>Likes:{this.state.counter}</button><button onClick={this.callApi}>Call Api</button></div>
+      <div key={this.props.entry.id}><h3>{this.props.entry.initials} &#9733; {this.props.entry.score}</h3><button onClick={this.clickHandler}>Likes: {this.props.entry.likes}</button><button onClick={this.callApi}>Call Api</button></div>
     )
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    state
+  }
+}
 
-export default ScoreCard
+const mapDispatchToProps = (dispatch) => {
+  return { actions: bindActionCreators(actions, dispatch) }
+};
+
+export const ConnectedScoreCard = connect(mapStateToProps, mapDispatchToProps)(ScoreCard);
