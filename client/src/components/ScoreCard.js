@@ -35,14 +35,15 @@ class ScoreCard extends Component {
     )
   }
 }
-const mapStateToProps = (state) => {
-  return {
-    state
-  }
-}
+
+// const mapStateToProps = (state) => {
+//   return {
+//     state
+//   }
+// }
 
 const mapDispatchToProps = (dispatch) => {
   return { actions: bindActionCreators(actions, dispatch) }
 };
 
-export const ConnectedScoreCard = connect(mapStateToProps, mapDispatchToProps)(ScoreCard);
+export const ConnectedScoreCard = connect(null, mapDispatchToProps)(ScoreCard);
