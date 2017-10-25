@@ -21,11 +21,15 @@ class HighScores extends Component {
   }
 
   render(){
+    const sortedScoresByLikes = this.props.highscores.sort(function (a, b) {
+      return b.likes - a.likes;
+    });
+
     return (
       <div>
         <h1 id="highscores">HIGH SCORES</h1>
         <div className="col-3">
-          {this.props.highscores.map(entry => <ConnectedScoreCard entry={entry} key={entry.id} />)}
+          {sortedScoresByLikes.map(entry => <ConnectedScoreCard entry={entry} key={entry.id} />)}
           
         </div>
       </div>

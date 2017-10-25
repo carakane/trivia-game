@@ -7135,3 +7135,98 @@ Processing by GamesController#index as */*
 Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/api/games" for 127.0.0.1 at 2017-10-25 12:06:31 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.39ms)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/api/games/9" for 127.0.0.1 at 2017-10-25 12:08:01 -0400
+Processing by GamesController#update as */*
+  Parameters: {"id"=>"9", "game"=>{"id"=>"9"}}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "games" SET "likes" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["likes", 6], ["updated_at", "2017-10-25 16:08:01.868328"], ["id", 9]]
+  [1m[35m (86.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 97ms (Views: 0.7ms | ActiveRecord: 88.2ms)
+
+
+Started PUT "/api/games/9" for 127.0.0.1 at 2017-10-25 12:08:02 -0400
+Processing by GamesController#update as */*
+  Parameters: {"id"=>"9", "game"=>{"id"=>"9"}}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "games" SET "likes" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["likes", 7], ["updated_at", "2017-10-25 16:08:02.615370"], ["id", 9]]
+  [1m[35m (42.2ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 49ms (Views: 1.2ms | ActiveRecord: 43.4ms)
+
+
+Started PUT "/api/games/9" for 127.0.0.1 at 2017-10-25 12:08:03 -0400
+Processing by GamesController#update as */*
+  Parameters: {"id"=>"9", "game"=>{"id"=>"9"}}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "games" SET "likes" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["likes", 8], ["updated_at", "2017-10-25 16:08:03.067082"], ["id", 9]]
+  [1m[35m (50.9ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 200 OK in 58ms (Views: 1.6ms | ActiveRecord: 51.9ms)
+
+
+Started GET "/api/games" for 127.0.0.1 at 2017-10-25 12:08:04 -0400
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.37ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/games/9" for 127.0.0.1 at 2017-10-25 12:08:14 -0400
+Processing by GamesController#update as */*
+  Parameters: {"id"=>"9", "game"=>{"id"=>"9"}}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "games" SET "likes" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["likes", 9], ["updated_at", "2017-10-25 16:08:14.631048"], ["id", 9]]
+  [1m[35m (84.5ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 98ms (Views: 0.6ms | ActiveRecord: 86.0ms)
+
+
+Started GET "/api/games" for 127.0.0.1 at 2017-10-25 12:15:12 -0400
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.56ms)
+Completed 200 OK in 37ms (Views: 31.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/games" for 127.0.0.1 at 2017-10-25 12:15:46 -0400
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."score" DESC, "games"."initials" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.46ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/games/9" for 127.0.0.1 at 2017-10-25 12:15:54 -0400
+Processing by GamesController#update as */*
+  Parameters: {"id"=>"9", "game"=>{"id"=>"9"}}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "games" SET "likes" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["likes", 10], ["updated_at", "2017-10-25 16:15:54.575732"], ["id", 9]]
+  [1m[35m (57.4ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 64ms (Views: 0.8ms | ActiveRecord: 58.4ms)
+
+
+Started PUT "/api/games/5" for 127.0.0.1 at 2017-10-25 12:16:11 -0400
+Processing by GamesController#update as */*
+  Parameters: {"id"=>"5", "game"=>{"id"=>"5"}}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "games" SET "likes" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["likes", 11], ["updated_at", "2017-10-25 16:16:11.771372"], ["id", 5]]
+  [1m[35m (57.6ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 74ms (Views: 0.9ms | ActiveRecord: 58.1ms)
+
+
