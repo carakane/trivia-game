@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
       case 'SHOW_SCORES':
         return { ...state, loading: false, highscores: action.payload };
       case 'UPDATE_SCORE':
-        return{...state, score: state.score += action.amount, clueCount: state.clueCount += 1}
+        return{...state, score: state.score + action.amount, clueCount: state.clueCount + 1}
       case 'UPDATING_LIKES':
         return { ...state, updating: true }
       case 'SHOW_LIKES':
