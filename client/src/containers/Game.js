@@ -7,18 +7,6 @@ import Score from '../components/Score'
 import swal from 'sweetalert'
 
 class Game extends Component {
-  // constructor() {
-  //   super()
-
-  //   this.state = {
-  //     visible: '',
-  //     score: 0,
-  //     clueCount: 0
-  //   }
-  //   this.scoreHandler = this.scoreHandler.bind(this)
-  //   this.gameOverCheck = this.gameOverCheck.bind(this)
-  // }
-
   componentDidMount = () => {
     this.props.actions.fetchGame();
   }

@@ -6,16 +6,6 @@ import * as actions from '../actions/actionCreators'
 import {ConnectedScoreCard} from '../components/ScoreCard'
 
 class HighScores extends Component {
-  // constructor(){
-  //   super()
-
-  //   this.state = {
-  //     initials: '',
-  //     score: '',
-  //     counter: 0
-  //   }
-  // }
-
   componentDidMount() {
     this.props.actions.highScores();
   }
