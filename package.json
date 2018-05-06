@@ -28,14 +28,14 @@
   "homepage": "https://github.com/carakane/trivia-game#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "react": "^16.0.0",
-    "react-bootstrap": "^0.31.3",
-    "react-dom": "^16.0.0",
-    "react-redux": "^5.0.6",
+    "react": "^16.3.2",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "sweetalert": "^2.0.5",
-    "titleize": "^1.0.0"
+    "sweetalert": "^2.1.0",
+    "titleize": "^1.0.1"
   }
 }
